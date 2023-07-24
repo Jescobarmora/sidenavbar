@@ -1,0 +1,19 @@
+<div id="<%= dom_id category %>">
+  <h1 class="text-2x1 font-bold text-center">
+    <%= category.name %>
+  </h1>
+  <% category.posts.each do |post| %>
+    <h4>
+      <strong>Title:</strong>
+      <%= post.title %>
+    </h4>
+    <h6>
+      <strong>Author:</strong>
+      <%= post.user.email %>
+    </h6>
+    <p>
+      <strong>Content:</strong>
+      <%= post.body %>
+    </p>
+  <% end %>
+</div>
